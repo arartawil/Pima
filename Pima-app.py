@@ -25,8 +25,8 @@ if uploaded_file is not None:
 else:
     def user_input_features():
 
-        Pregnancies = st.sidebar.slider('Pregnancies', 0,10,5)
-        Glucose = st.sidebar.slider('Glucose', 0, 200, 150)
+        Pregnancies = st.sidebar.text_input('Pregnancies', 5)
+        Glucose = st.sidebar.text_input('Glucose', 10)
         BloodPressure = st.sidebar.slider('BloodPressure', 0, 100, 50)
         SkinThickness = st.sidebar.slider('SkinThickness', 0, 50, 10)
         Insulin = st.sidebar.slider('Insulin', 0, 120, 100)
