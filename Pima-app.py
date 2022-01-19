@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 st.write("""
 # Pima Indian Diabetes Prediction App
 
-This app predicts the **Diabetes ** Type 1!
+This app predicts the **Diabetes ** Type 2!
 
 """)
 
