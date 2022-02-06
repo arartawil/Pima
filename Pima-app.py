@@ -2,13 +2,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
 # Pima Indian Diabetes Prediction App
-
-This app predicts the **Diabetes ** Type 2!
-
+**Diabetes ** Type 2!
 """)
 
 st.sidebar.header('User Input Features')
@@ -25,13 +22,13 @@ if uploaded_file is not None:
 else:
     def user_input_features():
 
-        Pregnancies = st.sidebar.text_input('Pregnancies', 5)
-        Glucose = st.sidebar.text_input('Glucose', 10)
-        BloodPressure = st.sidebar.slider('BloodPressure', 0, 100, 50)
-        SkinThickness = st.sidebar.slider('SkinThickness', 0, 50, 10)
-        Insulin = st.sidebar.slider('Insulin', 0, 120, 100)
-        BMI = st.sidebar.slider('BMI', 10.0,100.0,17.2)
-        DiabetesPedigreeFunction = st.sidebar.slider('DiabetesPedigreeFunction', 0.0, 250.0, 150.0)
+        Pregnancies = st.sidebar.slider('Pregnancies', 0, 17, 10)
+        Glucose = st.sidebar.slider('Glucose', 0, 199, 100)
+        BloodPressure = st.sidebar.slider('Blood Pressure', 0, 122, 50)
+        SkinThickness = st.sidebar.slider('Skin Thickness', 0, 99, 10)
+        Insulin = st.sidebar.slider('Insulin', 0, 846, 100)
+        BMI = st.sidebar.slider('Body Mass Index', 10.0 ,67.1 ,17.2)
+        DiabetesPedigreeFunction = st.sidebar.slider('Diabetes Pedigree (Family history)', 0.08, 2.42, 1.0)
         Age = st.sidebar.slider('Age', 10, 80, 60)
         data = {
                 'Pregnancies': Pregnancies,
@@ -49,9 +46,9 @@ else:
 
 # Combines user input features with entire penguins dataset
 # This will be useful for the encoding phase
-Pima_ = pd.read_csv('Pima Indians Diabetes Database.csv')
-Pima = Pima_.drop(columns=['Outcome'])
-df = pd.concat([input_df,Pima],axis=0)
+#Pima_ = pd.read_csv('Pima Indians Diabetes Database.csv')
+#Pima = Pima_.drop(columns=['Outcome'])
+#df = pd.concat([input_df,Pima],axis=0)
 
 # Displays the user input features
 st.subheader('User Input features')
