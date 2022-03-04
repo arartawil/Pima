@@ -8,7 +8,7 @@ target = 'Outcome'
 # Separating X and y
 X = df.drop('Outcome', axis=1)
 Y = df['Outcome']
-
+X=X[["Age","BloodPressure","BMI","Glucose"]]
 # Build random forest model
 from sklearn.ensemble import RandomForestClassifier
 clf = RandomForestClassifier()
